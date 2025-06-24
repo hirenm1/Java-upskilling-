@@ -80,5 +80,38 @@ public class Exercises_Tests {
 
     // write unit tests for the Scottish wedding example here
 
+    public class ScottishWeddingTest {
+
+        @Test
+        public void testLevel4() {
+            assertEquals(20, ScottishWedding.getMaxAttendees(4));
+        }
+
+        @Test
+        public void testLevel3() {
+            assertEquals(50, ScottishWedding.getMaxAttendees(3));
+        }
+
+        @Test
+        public void testLevel2() {
+            assertEquals(50, ScottishWedding.getMaxAttendees(2));
+        }
+
+        @Test
+        public void testLevel1() {
+            assertEquals(100, ScottishWedding.getMaxAttendees(1));
+        }
+
+        @Test
+        public void testLevel0() {
+            assertEquals(200, ScottishWedding.getMaxAttendees(0));
+        }
+
+        @Test
+        public void testInvalidLevelThrowsException() {
+            assertThrows(IllegalArgumentException.class, () -> ScottishWedding.getMaxAttendees(-1));
+            assertThrows(IllegalArgumentException.class, () -> ScottishWedding.getMaxAttendees(5));
+        }
+    }
 
 }

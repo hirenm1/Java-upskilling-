@@ -56,8 +56,26 @@ public class Exercises {
     }
 
     // Question 5
-    public static int getScottishMaxWeddingNumber(int covidLevel)
     {
-        return 0;
+        public class ScottishWedding {
+
+            public static int getMaxAttendees(int covidLevel) {
+                switch (covidLevel) {
+                    case 4:
+                        return 20;
+                    case 3:
+                    case 2:
+                        return 50;
+                    case 1:
+                        return 100;
+                    case 0:
+                        return 200;
+                    default:
+                        throw new IllegalArgumentException("Invalid Covid alert level: " + covidLevel);
+
+                        return 0;
+                }
+            }
+
     }
 }
